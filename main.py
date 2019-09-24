@@ -74,6 +74,13 @@ rf.fit(x_train, y_train)
 pred = rf.predict(x_test)
 print("score for RF: ", accuracy_score(pred,y_test))
 
+#xgboost
+from xgboost import XGBClassifier
+xgb = XGBClassifier()
+xgb.fit(x_train, y_train)
+pred = xgb.predict(x_test)
+print("score for xgb: ", accuracy_score(pred,y_test))
+
 #For doing the prediction on the test data
 lr.fit(train_vect,train_df['label'])
 pred = lr.predict(test_vect)
